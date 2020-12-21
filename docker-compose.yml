@@ -1,16 +1,23 @@
 # Docker-compose.yml to run the NGINX webserver and librespeed servers
 
-version: "3"
+version: '3'
 services:
-  webserver:
-    build:
-      context: .
-      dockerfile: dockerfiles/Dockerfile-webserver
+  web:
+    image: nginx:latest
     ports:
-      - "80:80"
+    - "80:80"
     volumes:
-      - /ConnectedMB/server/serverfiles/www:/usr/share/nginx/html
-      
+    - /isocmb/www:/usr/share/nginx/html
+  db:
+    image: mysql
+    ports:
+    - "3306:3306"
+    environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+    - MYSQL_DATABASE=demodb
+     
 version: "2.1"
 services:
   librespeed:
