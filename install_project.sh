@@ -17,6 +17,6 @@ rm README.md -y
 
 # cd /home/connectin      # Move to the home directory and start up Docker virtual machines. 
 
-# Install Docker and run the docker-compose instructions.
+# Install Docker and run the docker-compose instructions. 
 sudo apt install docker-compose -y   # This will install all the requirements to run Docker VMs.
 sudo docker-compose up -d    # The -d is for "detached" so they will run in the background and still allow use of the root OS.
