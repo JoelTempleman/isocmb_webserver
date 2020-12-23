@@ -5,6 +5,7 @@ set -x #echo on
 # Script used to install Git Hub repo into the correct areas on the server
 # Name: "install_project.sh" Copyright (c) Joel Templeman 2020
 
+cd /isoc_webserver
 rm README.md -y
 
 # cp -rf /ConnectedMB/server/serverfiles/* /home/connectin/ # This will contain a clone copy of the Git Hub project
