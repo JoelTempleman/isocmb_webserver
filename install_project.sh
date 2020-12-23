@@ -5,6 +5,8 @@ set -x #echo on
 # Script used to install Git Hub repo into the correct areas on the server
 # Name: "install_project.sh" Copyright (c) Joel Templeman 2020
 
+rm README.md -y
+
 # cp -rf /ConnectedMB/server/serverfiles/* /home/connectin/ # This will contain a clone copy of the Git Hub project
 
 # mkdir /ConnectedMB/server/serverfiles/www/packages/ # All the files for the monitors will go here
