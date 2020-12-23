@@ -62,7 +62,7 @@ an exact copy of my project, you can make a replica if you just clone the curren
 			# This is required to put the project files in the correct location
 			
 	git clone git@github.com:JoelTempleman/isocmb_webserver.git
-	cd /isocmb
+	cd /isocmb_webserver
 	chmod +x install_project.sh
 	./install_project.sh -y
   
