@@ -40,7 +40,7 @@ e) Install SSH Server:
 		
 f) Connect the server to the Git Hub repository. Now that SSH is established, it will be easiest to use a different computer on the network with Internet connectivity. This way you can cut and paste commands from this and other instructions into the server. This is quicker and avoids typos.
 
-g) From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download)so I can cut and paste. On a Mac, you can just use the terminal window and command "ssh connectin@IP-ADDRESS" # Use the password you used when installing the OS:
+g) From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download) so I can cut and paste. On a Mac, you can just use the terminal window and command "ssh connectin@IP-ADDRESS" # Use the password you used when installing the OS:
 
 	sudo -s		# Move to root power or it won't connect properly!
 	
