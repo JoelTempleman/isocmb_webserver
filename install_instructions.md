@@ -1,9 +1,9 @@
-Installation Overview
+# Installation Overview
 This project is intended as a learning project covering several topics. Each part can be auto-installed by following the direction and running the scripts, or the phases can be broken down and each step explored and explained.
 
-Contributors: ISOC Manitoba Chapter & MERLIN Networks - Started 5 December 2020
+# Contributors: ISOC Manitoba Chapter & MERLIN Networks - Started 5 December 2020
 
-The general phases are:
+# The general phases are:
 Preparing the equipment: a) find an appropriate project server. 
 
 Flashing the base OS: The server will need a base operating system installed.
@@ -14,7 +14,7 @@ Docker up: Start the multiple virtual servers.
 
 Test and modify: Troubleshooting and corrections may be required.
 
-Detailed Instructions
+# Detailed Instructions
 Part 1. Set up the project server
 I used a Dell Precision T3400 Intel Quad Core 2.4GHz Tower Workstation - 4GB RAM
 
