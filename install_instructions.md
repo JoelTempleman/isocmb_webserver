@@ -28,7 +28,7 @@ c) When prompted, make the username: “isocmb”. This will make the file path 
 Note: Do not install OpenSSH during setup process and don't choose any of the add-ons
 d) Reboot and login. Note: There will be a bunch of information displayed. You should see the current IP address. Write that down so you can SSH into it later.
 
-Type: 	sudo apt update && sudo upgrade upgrade -y
+Type:	sudo apt update && sudo upgrade upgrade -y
 
 e) Install SSH Server:
 
@@ -42,12 +42,14 @@ f) Connect the server to the Git Hub repository. Now that SSH is established, it
 g) From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download)so I can cut and paste. On a Mac, you can just use the terminal window and command "ssh connectin@IP-ADDRESS" # Use the password you used when installing the OS:
 
 	sudo -s		# Move to root power or it won't connect properly!
+	
 h) Follow these instructions and if you run into problems, check out the directions to connect the server to GitHub via SSH https://help.github.com/en/github/authenticating-to-github/about-ssh
 
 	ssh-keygen -t rsa -b 4096 -C "your@email.com" # Just hit enter at the prompt three times to get the defaults.
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_rsa
 	cat ~/.ssh/id_rsa.pub    		# This will show the public encryption key. Copy the text.
+
 i) Go to your GitHub account in the web browser. Login. Go to Settings under the user profile. Go to SSH and GPG Keys. Click "New SSH key". Give it a title to identify the key. Paste the key into the space marked "Key". Click "Add SSH Key".
 
 See the instructions on creating your own spin off version of this project if you plan to customize it. If you just want 
