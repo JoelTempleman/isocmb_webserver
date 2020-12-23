@@ -28,15 +28,16 @@ c) When prompted, make the username: “isocmb”. This will make the file path 
 Note: Do not install OpenSSH during setup process and don't choose any of the add-ons
 d) Reboot and login. Note: There will be a bunch of information displayed. You should see the current IP address. Write that down so you can SSH into it later.
 
-Type:	sudo apt update && sudo upgrade upgrade -y
+	Type:	sudo apt update && sudo upgrade upgrade -y
 
 e) Install SSH Server:
 
-Type:	sudo apt-get install openssh-server -y
-	sudo systemctl status ssh 		# You should get a response of "Active: active (running)"
-	If the ssh server isn't running try:
-		sudo systemctl enable ssh	# Only needed if not already running
-		sudo systemctl start ssh	# Only needed if not already running	
+	Type:	sudo apt-get install openssh-server -y
+		sudo systemctl status ssh 		# You should get a response of "Active: active (running)"
+		If the ssh server isn't running try:
+			sudo systemctl enable ssh	# Only needed if not already running
+			sudo systemctl start ssh	# Only needed if not already running
+		
 f) Connect the server to the Git Hub repository. Now that SSH is established, it will be easiest to use a different computer on the network with Internet connectivity. This way you can cut and paste commands from this and other instructions into the server. This is quicker and avoids typos.
 
 g) From another computer, use SSH to access the server. I am using a computer running the Windows OS and the software "Bitvise SSH Client" (https://www.bitvise.com/ssh-client-download)so I can cut and paste. On a Mac, you can just use the terminal window and command "ssh connectin@IP-ADDRESS" # Use the password you used when installing the OS:
