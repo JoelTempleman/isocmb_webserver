@@ -1,15 +1,18 @@
-# Docker-compose.yml to run the NGINX webserver and librespeed servers
+# Docker-compose.yml to run the NGINX webserver, MySQL Server, and librespeed servers
 
 version: '3'
 services:
   web:
     image: nginx:latest
+    container_name: webserver
     ports:
     - "80:80"
     volumes:
     - /isocmb/www:/usr/share/nginx/html
+    restart: unless-stopped
   db:
     image: mysql
+    container_name: mysql
     ports:
     - "3306:3306"
     environment:
@@ -17,25 +20,26 @@ services:
     - MYSQL_USER=user
     - MYSQL_PASSWORD=password
     - MYSQL_DATABASE=demodb
-     
-version: "2.1"
-services:
-  librespeed:
-    image: ghcr.io/linuxserver/librespeed
-    container_name: librespeed
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Winnipeg
-      - PASSWORD=PASSWORD
-      - CUSTOM_RESULTS=true #optional
-      - DB_TYPE=sqlite #optional
-      - DB_NAME=DB_NAME #optional
-      - DB_HOSTNAME=DB_HOSTNAME #optional
-      - DB_USERNAME=DB_USERNAME #optional
-      - DB_PASSWORD=DB_PASSWORD #optional
-    volumes:
-      - /path/to/appdata/config:/config
-    ports:
-      - 8081:8081
     restart: unless-stopped
+     
+#version: "2.1"
+#services:
+#  librespeed:
+#    image: ghcr.io/linuxserver/librespeed
+#    container_name: librespeed
+#    environment:
+#      - PUID=1000
+#      - PGID=1000
+#      - TZ=America/Winnipeg
+#      - PASSWORD=PASSWORD
+#      - CUSTOM_RESULTS=true #optional
+#      - DB_TYPE=sqlite #optional
+#      - DB_NAME=DB_NAME #optional
+#      - DB_HOSTNAME=DB_HOSTNAME #optional
+#      - DB_USERNAME=DB_USERNAME #optional
+#      - DB_PASSWORD=DB_PASSWORD #optional
+#    volumes:
+#      - /path/to/appdata/config:/config
+#    ports:
+#      - 8081:8081
+#    restart: unless-stopped
