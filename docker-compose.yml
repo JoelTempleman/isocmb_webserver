@@ -9,13 +9,13 @@ services:
     - "80:80"
     volumes:
     - /home/isocmb/www/prod:/usr/share/nginx/html
-    - ./site.conf:/etc/nginx/conf.d/site.conf
-    - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    - /isocmb_webserver/site.conf:/etc/nginx/conf.d/site.conf
     restart: unless-stopped
     links:
     - php
   php:
     image: php:7-fpm
+    container_name: php
   db:
     image: mysql
     container_name: mysql
