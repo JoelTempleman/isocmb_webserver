@@ -10,7 +10,6 @@ services:
     volumes:
     - /home/isocmb/www/prod:/usr/share/nginx/html
     - ./site.conf:/etc/nginx/conf.d/site.conf
-    - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     restart: unless-stopped
   db:
     image: mysql
