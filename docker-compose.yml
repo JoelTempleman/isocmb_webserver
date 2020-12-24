@@ -1,4 +1,4 @@
-# Docker-compose.yml to run the NGINX webserver, MySQL Server, and librespeed servers
+# Docker-compose.yml to run the NGINX webserver, MySQL Server, and librespeed servers.
 
 version: '3'
 services:
