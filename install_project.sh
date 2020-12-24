@@ -6,7 +6,8 @@ set -x #echo on
 # Name: "install_project.sh" Copyright (c) Joel Templeman 2020
 
 cd /isoc_webserver
-rm README.md -y
+rm README.md
+rm install_instructions.md
 
 # cp -rf /ConnectedMB/server/serverfiles/* /home/connectin/ # This will contain a clone copy of the Git Hub project
 
@@ -21,3 +22,5 @@ rm README.md -y
 # Install Docker and run the docker-compose instructions. 
 sudo apt install docker-compose -y   # This will install all the requirements to run Docker VMs.
 sudo docker-compose up -d    # The -d is for "detached" so they will run in the background and still allow use of the root OS.
+
+rm install_project.sh
