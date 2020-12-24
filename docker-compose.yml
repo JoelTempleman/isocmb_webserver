@@ -8,7 +8,7 @@ services:
     ports:
     - "80:80"
     volumes:
-    - /home/isocmb/www/prod:/usr/share/nginx/html
+    - /home/isocmb/www/prod:/code
     - /isocmb_webserver/site.conf:/etc/nginx/conf.d/site.conf
     restart: unless-stopped
     links:
