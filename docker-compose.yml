@@ -12,6 +12,10 @@ services:
     - ./site.conf:/etc/nginx/conf.d/site.conf
     - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     restart: unless-stopped
+    links:
+    - php
+  php:
+    image: php:7-fpm
   db:
     image: mysql
     container_name: mysql
