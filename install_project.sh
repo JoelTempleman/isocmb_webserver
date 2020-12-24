@@ -9,7 +9,11 @@ cd /isoc_webserver
 rm README.md
 rm install_instructions.md
 
-# cp -rf /ConnectedMB/server/serverfiles/* /home/connectin/ # This will contain a clone copy of the Git Hub project
+mkdir /home/isocmb/www
+mkdir /home/isocmb/www/dev
+mkdir /home/isocmb/www/prod
+
+cp -rf /isocmb_webserver/template/* /home/isocmb/www/dev # This will contain a clone copy of the Git Hub project
 
 # mkdir /ConnectedMB/server/serverfiles/www/packages/ # All the files for the monitors will go here
 
