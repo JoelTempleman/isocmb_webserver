@@ -8,7 +8,7 @@ services:
     ports:
     - "80:80"
     volumes:
-    - /home/isocmb/www:/usr/share/nginx/html
+    - /home/isocmb/www/prod:/usr/share/nginx/html
     restart: unless-stopped
   db:
     image: mysql
