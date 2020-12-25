@@ -9,7 +9,7 @@ services:
     - "80:80"
     volumes:
     - /home/isocmb/www/prod:/usr/share/nginx/html
-    - /isocmb_webserver/site.conf:/etc/nginx/conf.d/site.conf
+    - /isocmb_webserver/site.conf:/etc/nginx/conf.d/default.conf
     restart: unless-stopped
     links:
     - php
