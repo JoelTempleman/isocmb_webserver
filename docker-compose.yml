@@ -16,7 +16,7 @@ services:
     image: php:7-fpm
     container_name: php
     volumes:
-    - /home/isocmb/www/prod:/usr/share/nginx/html
+    - /home/isocmb/www/prod:/
   db:
     image: mysql
     container_name: mysql
