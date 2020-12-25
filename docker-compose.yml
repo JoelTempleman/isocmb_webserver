@@ -1,4 +1,4 @@
-# Docker-compose.yml to run the NGINX webserver, MySQL Server, and librespeed servers.
+# Docker-compose.yml to run the NGINX webserver, MySQL Server, and librespeed servers.     - /isocmb_webserver/site.conf:/etc/nginx/conf.d/site.conf
 
 version: '3'
 services:
@@ -9,7 +9,6 @@ services:
     - "80:80"
     volumes:
     - /home/isocmb/www/prod:/usr/share/nginx/html
-    - /isocmb_webserver/site.conf:/etc/nginx/conf.d/site.conf
     restart: unless-stopped
     links:
     - php
